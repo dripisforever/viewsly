@@ -3,6 +3,7 @@
 
 body {
     padding-top:60px;
+    background-color: #fafafa;
 } 
 
 section {
@@ -54,13 +55,13 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: #000;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-  color: #fff;
+  color: #284b79;
   text-decoration: none;
   }
 }
@@ -203,4 +204,29 @@ input {
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+}
+
+.navbar-inverse {
+  background-color: #fff;
+  border-color: #e0e0e0;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  color: #284b79;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: transparent;
+    color: #9d9d9d;
+}
+a#forgot {
+    background-color: #159a77;
+    border-color: transparent;
+    margin-top: 1em;
+    margin-left: 12.5em;
+    padding-left: 4em;
+    padding-right: 4em;
+    &:hover {
+      background-color: #116b53;
+    }
 }
