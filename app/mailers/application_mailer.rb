@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'team@views.ly'
+  default from: 'VIEWS-TEAM@views.ly'
   layout 'mailer'
 end
