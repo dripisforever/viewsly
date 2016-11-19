@@ -1,4 +1,4 @@
-User.create(name:  "Talgat QAZAQ",
+User.create!(name:  "Talgat QAZAQ",
              email: "qazaqbro@gmail.com",
              password:              "foobar",
              password_confirmation: "foobar",
@@ -16,4 +16,10 @@ User.create(name:  "Talgat QAZAQ",
                password_confirmation: password,
                activated: true,
                activated_at:  Time.zone.now )
+end
+
+users = User.order(:created_at).take(6)
+50.times do 
+    content = Faker::Lorem.sentence(5)
+    users.each {|user| user.microposts.create!(content: content) }
 end
