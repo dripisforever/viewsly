@@ -10,9 +10,13 @@ gem 'coffee-rails', '4.2.1'
 gem 'jquery-rails', '4.1.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.4.1'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
