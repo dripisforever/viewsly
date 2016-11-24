@@ -356,6 +356,7 @@ DEPENDENCIES
   coffee-rails (= 4.2.1)
   faker
   fog
+  fog-aws
   guard (= 2.13.0)
   guard-minitest (= 2.4.4)
   jbuilder (= 2.4.1)
@@ -378,4 +379,4 @@ DEPENDENCIES
   will_paginate
 
 BUNDLED WITH
-   1.13.3
+   1.13.6
