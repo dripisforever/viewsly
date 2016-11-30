@@ -4,7 +4,7 @@
 body {
     padding-top:60px;
     background-color: #fafafa;
-} 
+}
 
 section {
   overflow: auto;
@@ -89,7 +89,7 @@ footer {
   list-style: none;
     li {
       float: left;
-      margin-left: 15px; 
+      margin-left: 15px;
     }
   }
 }
@@ -240,6 +240,7 @@ a#forgot {
     margin-bottom: 3em;
     padding: 10px 0;
     border: 1px solid #e8e8e8;
+    background-color: #fff;
   }
   .user {
     margin-top: 5em;
@@ -288,7 +289,7 @@ span.picture {
     margin-bottom: 3em;
     /* padding: 45px 0; */
     padding-bottom: 70px;
-    border: 1px solid #e8e8e8;
+    // border: 1px solid #e8e8e8;
     padding-top: 19px;
     padding-left: 20px;
     border-radius: 6px;
@@ -324,4 +325,60 @@ ol.microposts .gravatar {
   aside.col-md-4 {
         margin-left: -10em;
   }
+}
+
+/* sidebar */
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
+
+strong#following {
+    color: black;
+}
+strong#followers {
+    color: black;
 }
