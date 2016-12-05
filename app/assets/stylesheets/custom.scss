@@ -146,8 +146,15 @@ aside {
   float: left;
   margin-right: 10px;
 }
+.user-ava {
+  float: left;
+  margin-right: 10px;
+}
 
 .gravatar_edit {
+  margin-top: 15px;
+}
+.user-ava-edit {
   margin-top: 15px;
 }
 
@@ -264,6 +271,11 @@ a#forgot {
     margin-right: 10px;
     margin-top: 5px;
   }
+  .user-ava{
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
 }
 
 aside {
@@ -305,9 +317,18 @@ span.picture {
     -webkit-border-radius: 6px;
     margin-right: 10px;
 }
+.user-ava {
+  float: left;
+  -webkit-border-radius: 6px;
+  margin-right: 10px;
+}
 
 ol.microposts .gravatar {
     -webkit-border-radius: 30px;
+}
+
+ol.microposts .user-ava {
+    -webkit-border-radius: 50px;
 }
 
 @media (max-width: 768px)  {
@@ -333,11 +354,17 @@ ol.microposts .gravatar {
   float: left;
   margin-right: 10px;
 }
+.user-ava {
+  float: left;
+  margin-right: 10px
+}
 
 .gravatar_edit {
   margin-top: 15px;
 }
-
+.user-ava-edit {
+  margin-top: 15px;
+}
 .stats {
   overflow: auto;
   margin-top: 0;
@@ -364,7 +391,11 @@ ol.microposts .gravatar {
 .user_avatars {
   overflow: auto;
   margin-top: 10px;
+  margin-left: 80px;
   .gravatar {
+    margin: 1px 1px;
+  }
+  .user-ava {
     margin: 1px 1px;
   }
   a {

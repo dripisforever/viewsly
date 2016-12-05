@@ -12,12 +12,14 @@ gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.4.1'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'rmagick'
 gem 'fog'
 gem 'fog-aws'
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
-
+# gem 'rmagick'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
