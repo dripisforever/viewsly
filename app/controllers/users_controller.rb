@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.new(allow_params)
     if @user.save
       if params[:user][:avatar].present?
         render :crop
@@ -33,12 +33,12 @@ class UsersController < ApplicationController
   end
 
   def edit
-    # @user = User.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def update
-    # @user = User.find(params[:id])
-    if @user.update_attributes(user_params)
+    @user = User.find(params[:id])
+    if @user.update_attributes(allow_params)
       if params[:user][:avatar].present?
         render :crop
       else
@@ -72,7 +72,11 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation, :avatar)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    end
+
+    def allow_params
+      params.require(:user).permit!
     end
 
 

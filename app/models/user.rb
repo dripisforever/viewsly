@@ -10,13 +10,16 @@ class User < ApplicationRecord
     has_many :followers, through: :passive_relationships, source: :follower
 
     attr_accessor :remember_token, :activation_token, :reset_token
-    attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
-    after_update :crop_avatar
+
+
+
     before_save   :downcase_email
     before_create :create_activation_digest
 
     mount_uploader :avatar, AvatarUploader
-
+    attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
+    after_update :crop_avatar
+    
     validates :name, presence: true, length: { maximum: 50 }
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validates :email, presence: true, length: { maximum: 255 },
