@@ -14,6 +14,9 @@
       <% if current_user?(micropost.user) %>
         <%= link_to "delete", micropost, method: :delete, data: { confirm: "You sure?"} %>
       <% end %>
-
     </span>
+
+    <div class="micropost-like">
+  	  <div id="post_<%= micropost.id %>_likes"><%= render partial: "microposts/likes", locals: {micropost: micropost} %></div>
+    </div>
 </li>

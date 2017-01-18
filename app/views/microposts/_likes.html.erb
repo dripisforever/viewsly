@@ -1,0 +1,19 @@
+<% if logged_in? && current_user.likes?(micropost) %>
+
+
+  <%= link_to micropost_like_path(micropost), :remote => true, :method => :delete, class: 'like'  do %>
+    <span class="glyphicon glyphicon-heart" style="color: red; background-color: transparent; "></span>
+  <% end %>
+  <% if micropost.likes.count > 0 %>
+    <div class="like-count"><%= micropost.likes.count %></div>
+  <% end %>
+<% else %>
+
+
+  <%= link_to micropost_like_path(micropost), :remote => true, :method => :post, class: 'unlike' do %>
+    <span class="glyphicon glyphicon-heart-empty" style="color: red; background-color: transparent;"></span>
+  <% end %>
+  <% if micropost.likes.count > 0 %>
+    <div class="like-count"><%= micropost.likes.count %></div>
+  <% end %>
+<% end %>

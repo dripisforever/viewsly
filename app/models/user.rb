@@ -19,7 +19,7 @@ class User < ApplicationRecord
     mount_uploader :avatar, AvatarUploader
     attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
     after_update :crop_avatar
-    
+
     validates :name, presence: true, length: { maximum: 50 }
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validates :email, presence: true, length: { maximum: 255 },
@@ -103,6 +103,10 @@ class User < ApplicationRecord
 
     def crop_avatar
       avatar.recreate_versions! if crop_x.present?
+    end
+
+    def likes?(micropost)
+      micropost.likes.where(user_id: id).any?
     end
 
   private
