@@ -18,8 +18,13 @@ gem 'fog-aws'
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+
 # gem 'rmagick'
 gem 'mini_magick'
+
+#Search
+gem 'elasticsearch-rails'
+gem 'elasticsearch-model'
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
