@@ -1,7 +1,15 @@
 <% provide(:title, "All users") %>
+
+<%= form_tag users_path, class: 'woes', method: :get do %>
+  <%= text_field_tag :query, params[:query], class: 'form-control typeahead', id: 'user_search' %>
+  <span class="search-image">
+    <%= image_tag('stories-logo.svg', height: 40, alt: "Stories") %>
+  </span>
+  <%= submit_tag 'Search', class: 'searching' %>
+<% end %>
+
 <h1>All users</h1>
-<%= will_paginate %>
+
 <ul class="users">
     <%= render @users %>
 </ul>
-<%= will_paginate %>

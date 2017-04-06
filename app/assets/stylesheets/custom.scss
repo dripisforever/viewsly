@@ -283,8 +283,10 @@ a#forgot {
 aside {
   float: none;
   textarea {
-    height: 100px;
+    // height: 100px;
     margin-bottom: 5px;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.04);
   }
 }
 
@@ -471,4 +473,15 @@ a.like:hover {
 
 a.unlike:hover {
     background-color: transparent;
+}
+
+//header
+// .container {
+//   margin-top: 4px;
+//   padding-bottom: 4px;
+// }
+
+header.navbar.navbar-fixed-top.navbar-inverse {
+  padding-top: 4px;
+  padding-bottom: 4px;
 }

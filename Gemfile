@@ -19,8 +19,8 @@ gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 # gem 'rmagick'
-gem 'mini_magick'
-
+# gem 'mini_magick'
+gem 'searchkick'
 group :development, :test do
   gem 'sqlite3', '1.3.11'
   gem 'byebug',  '9.0.0', platform: :mri

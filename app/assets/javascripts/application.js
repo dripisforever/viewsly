@@ -15,4 +15,5 @@
 //= require jquery.Jcrop
 //= require bootstrap
 //= require turbolinks
+//= require typeahead
 //= require_tree .

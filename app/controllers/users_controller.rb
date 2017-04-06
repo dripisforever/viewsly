@@ -4,7 +4,18 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: [:destroy]
 
   def index
-    @users = User.paginate(page: params[:page])
+    # @users = User.paginate(page: params[:page])
+    @users = if params[:query].present?
+      User.search(params[:query])
+    else
+      User.all
+    end
+  end
+
+  def autocomplete
+    render json: User.search(params[:query], { match: :word_start, fields: ["name^5", "avatar"]}).map do |user|
+      { name: user.name, value: user.id }
+    end
   end
 
   def show
